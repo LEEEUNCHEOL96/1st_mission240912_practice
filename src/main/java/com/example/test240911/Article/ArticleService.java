@@ -31,8 +31,5 @@ public class ArticleService {
         a.setContent(content);
         a.setCreateDate(LocalDateTime.now());
         this.articleRepository.save(a);
-
     }
-
-
 }
