@@ -32,5 +32,9 @@ public class ArticleController {
         return "article_detail";
 
     }
+    @GetMapping("/create")
+    public String createArticle(){
+        return "article_form";
+    }
 
 }

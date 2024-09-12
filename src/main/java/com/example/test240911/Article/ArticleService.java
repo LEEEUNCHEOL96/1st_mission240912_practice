@@ -3,6 +3,7 @@ package com.example.test240911.Article;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,5 +25,12 @@ public class ArticleService {
         }else {
             return optionalArticle.get();
         }
+    }
+    public void create(String title, String content){
+       Article article = new Article();
+       article.setTitle(title);
+       article.setContent(content);
+       article.setCreateDate(LocalDateTime.now());
+       this.articleRepository.save(article);
     }
 }
